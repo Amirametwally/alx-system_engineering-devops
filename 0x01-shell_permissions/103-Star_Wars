@@ -1,0 +1,2 @@
+#!/bin/bash
+dism /online /Enable-Feature /FeatureName:TelnetClient
