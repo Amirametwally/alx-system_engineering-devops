@@ -1,2 +1,2 @@
 #!/bin/bash
-czt /etc/{passwd,hosts}
+cat /etc/{passwd,hosts}
