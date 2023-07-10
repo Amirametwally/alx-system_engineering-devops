@@ -1,2 +1,2 @@
-#!/bin/bach
-rev -r
+#!/bin/bash
+rev 
