@@ -1,0 +1,2 @@
+#!/bin/bash
+finf . -type f -empty -print -delete
