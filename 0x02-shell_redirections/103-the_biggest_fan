@@ -1,0 +1,2 @@
+#!/bin/bash
+awk -F'\t' '{print $1}' "$filename" | sort | uniq -c | sort -rn | head -n "$num_hosts" | awk '{print NR". "$2" ("$1" requests)"}'
