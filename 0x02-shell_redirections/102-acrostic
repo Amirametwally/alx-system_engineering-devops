@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -Eo '^[^ ]+' file
+awk '{if ($1 !="") print $1}' your_fil
