@@ -4,7 +4,7 @@
 #include <unistd.h>
 
 /**
- * infinite_while - infinite loop for parent process to stay alive
+ * infinite_while - infinite loop for parent
  *
  * Return: always 0
  */
