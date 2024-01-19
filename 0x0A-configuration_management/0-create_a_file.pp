@@ -1,5 +1,3 @@
-# Using Puppet, create a file in /tmp
-
 file { '/tmp/school':
   ensure => file,
   path   => '/tmp/school',
