@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Bash script to generate an RSA kry pair
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/school -P "betty"
