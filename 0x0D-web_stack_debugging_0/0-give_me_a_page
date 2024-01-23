@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 # start Apache to run on the container and to return a page containing Hello Holberton
 
+apt-get update
+apt-get -y install apache2
 service apache2 start
+
