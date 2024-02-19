@@ -5,15 +5,20 @@ import requests
 import sys
 
 if __name__ == "__main__":
-    user_id = sys.argv[1]
+    id = sys.argv[1]
     url = "https://jsonplaceholder.typicode.com/"
-    user = requests.get(url + "users/{}".format(user_id)).json()
-    username = user.get("username")
-    todos = requests.get(url + "todos", params={"userId": user_id}).json()
+    user = requests.get(url + "users/{}".format(id)).json()
+    todos = requests.get(url + "todos", params={"userId": id}).json()
 
-    with open("{}.json".format(user_id), "w") as json_f:
-        json.dump({user_id: [{
-            "task": t.get("title"),
-            "completed": t.get("completed"),
-            "username": username
-        } for t in todos]}, json_f)
+    tasks = []
+    for t in todos:
+        tasks.append(
+            {
+                "task": t.get("title"),
+                "completed": t.get("completed"),
+                "username": user.get("username"),
+            }
+        )
+
+    with open("{}.json".format(id), "w") as file:
+        json.dump({id: tasks}, file)
