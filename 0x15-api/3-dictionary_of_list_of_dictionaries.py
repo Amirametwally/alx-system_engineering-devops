@@ -11,7 +11,8 @@ if __name__ == "__main__":
 
     for user in users:
         user_id = user.get("id")
-        user_todos = requests.get(url + "todos", params={"userId": user_id}).json()
+        user_todos = requests.get(url + "todos",
+                                  params={"userId": user_id}).json()
         data[user_id] = []
 
         for todo in user_todos:
