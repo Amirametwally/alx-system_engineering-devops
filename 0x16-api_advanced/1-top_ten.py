@@ -9,7 +9,7 @@ def top_ten(subreddit):
     """ queries the Reddit API and prints the
     titles of the first 10 hot posts"""
     url = f"https://www.reddit.com/r/{subreddit}/hot.json"
-    headers = {'User-Agent': 'Mozilla/5.0'}
+    headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64)'}
     response = requests.get(url, headers=headers)
 
     if response.status_code == 200:
